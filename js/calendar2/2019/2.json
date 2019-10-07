@@ -1,0 +1,74 @@
+{
+  "month": 2,
+  "year": 2019,
+  "labels": {
+    "1": {
+      "name": "Konferencja naukowa",
+      "color": "#C5006F"
+    },
+    "6": {
+      "name": "Wydarzenia startupowe",
+      "color": "#008B33"
+    },
+    "10": {
+      "name": "Grupy rehabilitacyjne",
+      "color": "#0000DD"
+    },
+    "11": {
+      "name": "Wydarzenia lokalne",
+      "color": "#6700B3"
+    },
+    "14": {
+      "name": "Hakaton Wolontariacki",
+      "color": "#FF9C10"
+    },
+    "15": {
+      "name": "Konferencja popularnonaukowa",
+      "color": "#2E2E2F"
+    }
+  },
+  "events": [
+    {
+      "day": 1,
+      "month": 5,
+      "year": 2019,
+      "title": "Science Day",
+      "labels": [ 15 ]
+    },
+    {
+      "day": 7,
+      "month": 5,
+      "year": 2019,
+      "title": "Rehab w teatrze",
+      "labels": [ 10 ]
+    },
+    {
+      "day": 11,
+      "month": 5,
+      "year": 2019,
+      "title": "Neuron Warszawa",
+      "labels": [ 11 ]
+    },
+    {
+      "day": 18,
+      "month": 5,
+      "year": 2019,
+      "title": "Hakaton 2019",
+      "labels": [ 14 ]
+    },
+    {
+      "day": 22,
+      "month": 5,
+      "year": 2019,
+      "title": "LVLUP Startup",
+      "labels": [ 6 ]
+    },
+    {
+      "day": 28,
+      "month": 5,
+      "year": 2019,
+      "title": "Breaking things and seeing what happens",
+      "labels": [ 1 ]
+    }
+  ]
+}

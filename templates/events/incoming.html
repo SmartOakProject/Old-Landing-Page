@@ -1,0 +1,35 @@
+<section id="incoming">
+    <h4 class="text-center text-lg-left">Najbliższe</h4>
+    <!--
+    {
+        "time": {
+            "day":    1,
+            "month":  "Maja",
+            "year":   2019,
+            "start":  "08:00",
+            "end":    "22:45"
+        },
+        "title": {
+            "primary":    "Konferencja",
+            "secondary":  "popularnonaukowa"
+        },
+        "image":        "img/calendar/stock.png",
+        "description":  "<p>Some HTML description</p>"
+    },
+    -->
+
+    <div class="row no-gutters">
+        {{#events}}
+            <div class="event col-12 col-sm-4  px-4 py-4">
+                <div class="square">
+                    <img class="img-fluid square" src="{{image}}" alt="">
+                    <span class="title-day">{{time.day}}</span>
+                    <span class="title-month">{{time.month}}</span>
+                    <span class="title-separator"></span>
+                    <span class="title-primary">{{title.primary}}</span>
+                    <span class="title-secondary">{{title.secondary}}</span>
+                </div>
+            </div>
+        {{/events}}
+    </div>
+</section>

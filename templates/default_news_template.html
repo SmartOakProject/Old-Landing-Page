@@ -1,0 +1,23 @@
+<section id="news-section" class="mt-5">
+    <div class="container-fluid px-3">
+        <div class="row">
+            {{#news}}
+                <div class="mb-4 col-sm-6 col-md-4 col-xl-2 px-250">
+                    <div class="card border-0 h-100 shadowed">
+                        <div class="card-body p-0">
+                            <div class="rounded-top overflow-hidden">
+                                <img src="{{image}}" class="img-fluid mb-0" alt="Projekt {{index}}"/>
+                            </div>
+                            <h6 class="card-title text-center my-3">
+                                {{title}}
+                            </h6>
+                            <p class="text-justify mb-1 mx-1 pb-2">
+                                {{content}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            {{/news}}
+        </div>
+    </div>
+</section>

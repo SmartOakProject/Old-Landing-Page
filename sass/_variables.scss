@@ -1,0 +1,105 @@
+/** Base configuration like colors and heights */
+$border-radius: 25px;       // Plays a role in a "rounded" class
+
+// Site squares
+$squares-width:     350px;
+$squares-height:    350px;
+$squares-radius:    10%;
+$squares-shadow:    0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+
+$headings-color: #0e196e;
+
+$nav-primary-height: 46px;
+$nav-secondary-height: 43px;
+
+$header-height: 565px;
+
+$nav-primary-color:   #fff;
+$nav-secondary-color: #fff;
+
+$theme-colors-dark: #0e0e0e;
+$theme-colors-dark-light: #151515;
+
+$theme-colors-light: rgb(248, 249, 250);
+
+$border-color-active: #2a80f8;
+
+$link-color-active: rgba(255,255,255,0.85);
+
+// Used to place something on top, there should be no bigger z-index than this
+// This could be done better (without z-index), but thats the way bootstrap sort things out
+$zindex-peak: 9998; // 9999 is used by js plugin called cookie consent
+
+$spacer: 1rem;
+$spacers: (
+  250: ($spacer * .75),     // Cannot do 2.5 so 250 has to be fine, sorry
+  450: ($spacer * 2),       // Cannot do 4.5 so 450 has to be fine, sorry
+  550: ($spacer * 3.5),     // ...
+    6: ($spacer * 4),
+  650: ($spacer * 6),
+    7: ($spacer * 8),
+);
+
+/** Buttons configuration */
+$buttons-default-padding: $spacer * .2;
+$buttons-default-font-size: 13px;
+$buttons-default-border-size: 1px;
+$buttons-default-text-color: #393939;
+$buttons-default-border-color: $buttons-default-text-color;
+$buttons-default-hover-text-color: $nav-primary-color;
+$buttons-default-hover-background-color: rgba(0, 0, 0, 0.2);
+$buttons-default-transition: all .5s;
+
+$buttons-header-font-size: $buttons-default-font-size;
+$buttons-header-border-size: $buttons-default-border-size;
+$buttons-header-text-color: $nav-primary-color;
+$buttons-header-border-color: $nav-primary-color;
+$buttons-header-hover-text-color: $nav-primary-color;
+$buttons-header-hover-background-color: $buttons-default-hover-background-color;
+$buttons-header-transition: $buttons-default-transition;
+
+$buttons-article-text-color: $buttons-default-text-color;
+$buttons-article-hover-background-color: rgba(0, 0, 0, 0.2);
+$buttons-article-hover-text-color: $buttons-article-text-color;
+$buttons-article-transition: $buttons-default-transition;
+
+/** Article configuration */
+$article-image-rotatable-width:           $squares-width;
+$article-image-rotatable-height:          $squares-height;
+$article-image-rotatable-border-radius:   $squares-radius;
+$article-image-rotatable-border-radius:   $squares-radius;
+$article-image-rotatable-box-shadow:      $squares-shadow;
+
+$article-image-partners-height: auto;
+$article-image-partners-width: 95px;
+
+/** Calendar configuration */
+$calendar-primary-color: white;
+$calendar-secondary-color: rgba(255, 128, 10, 0.7);
+$calendar-third-color: $buttons-default-hover-background-color;
+
+$calendar-day-out-hover-color: $buttons-default-hover-background-color;
+$calendar-legend-text-color: black;
+
+/** Incoming events */
+$incoming-events-background: linear-gradient(to right bottom, rgba(222, 150, 77, 0.7) 0%, rgba(222, 150, 77, 0.7) 100%);
+
+$theme-colors: (
+  "dark":           $theme-colors-dark,
+  "dark-light":     $theme-colors-dark-light
+);
+
+$navbar-dark-color:                 rgba($nav-primary-color, .85);
+$navbar-dark-hover-color:           rgba($nav-primary-color, .50);
+$navbar-dark-active-color:          $nav-primary-color;
+$navbar-dark-disabled-color:        rgba($nav-primary-color, .25);
+// $navbar-dark-toggler-icon-bg:       str-replace(url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='#{$navbar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"), "#", "%23");
+$navbar-dark-toggler-border-color:  rgba($nav-primary-color, .1);
+
+$navbar-light-color:                rgba($nav-secondary-color, .85);
+$navbar-light-hover-color:          rgba($nav-secondary-color, .50);
+$navbar-light-active-color:         $nav-secondary-color;
+$navbar-light-disabled-color:       rgba($nav-secondary-color, .25);
+// $navbar-light-toggler-icon-bg:      str-replace(url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"), "#", "%23");
+$navbar-light-toggler-border-color: rgba($nav-secondary-color, .1);
+

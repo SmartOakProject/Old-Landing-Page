@@ -1,0 +1,294 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Smart Oak Project</title>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Remove when going production -->
+    <meta name="robots" content="noindex">
+</head>
+<body>
+<nav id="primaryNav" class="px-0 py-0 navbar navbar-dark bg-dark navbar-expand-lg no-gutters">
+    <button class="navbar-toggler" type="button" data-toggle="collapse-fh" data-target="#leftToggler" aria-controls="leftToggler" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-home no-pointer-events"></i>
+    </button>
+    <span class="d-lg-none">
+                <img src="img/logo-biale.png" alt="Logo białe" />
+            </span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse-fh" data-target="#rightToggler" aria-controls="rightToggler" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon no-pointer-events"></span>
+    </button>
+
+    <!-- Primary navigation content -->
+    <!-- Show it as-it-is since >= lg, other way use toggler button -->
+    <div class="navbar-collapse bg-dark navbar-fh" id="leftToggler">
+        <ul id="social-links" class="d-none d-lg-flex navbar-nav col-lg-3 justify-content-start pl-3">
+            <li class="nav-item my-auto">
+                <a class="nav-link" href="https://www.facebook.com/neuronfoundation/" target="_blank"><em class="icon-rss"></em></a>
+            </li>
+            <li class="nav-item my-auto">
+                <a class="nav-link" href="https://www.facebook.com/smartoakproject/" target="_blank"><em class="icon-facebook"></em></a>
+            </li>
+            <li class="nav-item my-auto">
+                <a class="nav-link" href="https://twitter.com/dabrowskidebski" target="_blank"><em class="icon-twitter"></em></a>
+            </li>
+            <li class="nav-item my-auto">
+                <a class="nav-link" href="https://www.instagram.com/smartoakproject/" target="_blank"><em class="icon-instagram"></em></a>
+            </li>
+            <li class="nav-item my-auto">
+                <a class="nav-link" href="https://www.youtube.com/channel/UCFONzyeeunn3Wr5NC5SQFdA?view_as=subscriber" target="_blank"><em class="icon-youtube-play"></em></a>
+            </li>
+            <li class="nav-item my-auto">
+                <a class="nav-link" href="https://www.linkedin.com/company/smartoakproject" target="_blank"><em class="icon-linkedin-squared"></em></a>
+            </li>
+        </ul>
+
+        <ul class="animated px-3 px-lg-0 navbar-nav col-lg-6 justify-content-center w-0">
+            <li class="nav-item text-center col-1 pl-1 pr-0 d-none d-lg-block">
+                <span class="search icon-search"></span>
+            </li>
+            <li class="nav-item text-center col-10 px-0 d-none d-lg-block">
+                <input class="search w-100" placeholder="Szukaj w Smart Oak Project">
+            </li>
+            <li class="nav-item text-center col-1 pl-1 pr-0 d-none d-lg-block">
+                <span class="close">X</span>
+            </li>
+        </ul>
+
+        <ul class="animated px-0 px-lg-0 navbar-nav col-lg-6 justify-content-center">
+            <li class="d-none d-lg-flex nav-item my-auto">
+                <a class="search nav-link py-250 px-2" href="#">
+                    Szukaj
+                    <em class="d-none d-lg-inline pl-2 icon-search"></em>
+                </a>
+            </li>
+
+            <!-- MOBILE SEARCH -->
+            <li class="d-lg-none nav-item my-auto py-250 px-3">
+                <ul class="list-inline w-100">
+                    <li class="list-inline-item w-90">
+                        <input class="search w-100" placeholder="Szukaj w Smart Oak Project">
+                    </li>
+                    <li class="list-inline-item float-right">
+                        <span class="close">X</span>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- MOBILE SEARCH PLACEHOLDER -->
+            <li id="mobileSearchPlaceholder" class="d-lg-none nav-item my-auto py-250 px-3">
+            </li>
+
+            <li class="nav-item my-auto">
+                <a class="nav-link py-250 pl-3" href="#">
+                    Sklep
+                    <em class="d-none d-lg-inline pl-2 icon-basket"></em>
+                </a>
+            </li>
+            <li class="nav-item my-auto">
+                <a class="nav-link py-250 pl-3"  data-api_loader="download" href="#">
+                    Pobierz
+                    <em class="d-none d-lg-inline pl-2 icon-download"></em>
+                </a>
+            </li>
+            <li class="nav-item my-auto">
+                <a class="nav-link py-250 pl-3" data-tpl_loader="events" href="#">
+                    Wydarzenia
+                    <em class="d-none d-lg-inline pl-2 icon-calendar"></em>
+                </a>
+            </li>
+        </ul>
+
+        <ul class="navbar-nav col-lg-3 justify-content-end text-left text-lg-center pl-0 pr-3">
+            <li class="nav-item my-auto">
+                <a class="nav-link py-250 pl-3 px-lg-2" href="#">O projekcie</a>
+            </li>
+            <li class="nav-item my-auto">
+                <a class="nav-link py-250 pl-3 px-lg px-2"  data-tpl_loader="contact" href="#">Kontakt</a>
+            </li>
+            <li class="nav-item my-auto">
+                <a class="nav-link py-250 pl-3 px-lg px-2" href="#">Zaloguj</a>
+            </li>
+            <li class="nav-item my-auto dropdown">
+                <a class="nav-link py-250 pl-3 px-lg px-2" href="#" id="languageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    PL
+                </a>
+                <div id="languageDropdownList" class="dropdown-menu text-left rounded-0 bg-dark" aria-labelledby="languageDropdown">
+                    <a class="dropdown-item" href="#">EN</a>
+                    <a class="dropdown-item" href="#">DE</a>
+                    <a class="dropdown-item" href="#">FR</a>
+                    <a class="dropdown-item" href="#">ES</a>
+                    <a class="dropdown-item" href="#">IT</a>
+                    <a class="dropdown-item" href="#">NL</a>
+                    <a class="dropdown-item" href="#">RU</a>
+                    <a class="dropdown-item" href="#">SV</a>
+                    <a class="dropdown-item" href="#">TR</a>
+                    <a class="dropdown-item" href="#">ZH</a>
+                    <a class="dropdown-item" href="#">PT</a>
+                    <a class="dropdown-item" href="#">AR</a>
+                    <a class="dropdown-item" href="#">JA</a>
+                    <a class="dropdown-item" href="#">NOV</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<nav id="secondaryNav" class="px-0 py-0 navbar navbar-light bg-dark-light navbar-expand-lg no-gutters sticky-top">
+    <div class="navbar-collapse bg-dark navbar-fh" id="rightToggler">
+        <ul class="text-left text-lg-center navbar-nav mx-auto mt-2 mt-lg-0">
+            <li class="nav-item d-lg-none">
+                <h5 class="py-250 pl-3 text-white">NASZE PROJEKTY</h5>
+            </li>
+            <li class="nav-item mx-0">
+                <a class="nav-link py-250 px-350" data-api_loader="neuron_foundation" href="#">NeuroN Foundation</a>
+            </li>
+            <li class="nav-item mx-0">
+                <a class="nav-link py-250 px-350" data-api_loader="new_neuropsychiatry" href="#">New Neuropsychiatry</a>
+            </li>
+            <li class="nav-item mx-0">
+                <a class="nav-link py-250 px-350" data-api_loader="neuron_direction" href="#">NeuroN Direction</a>
+            </li>
+            <li class="nav-item mx-0">
+                <a class="nav-link py-250 px-350" data-api_loader="oakes_innovate" href="#">Oakes Innovate</a>
+            </li>
+            <li class="nav-item mx-0">
+                <a class="nav-link py-250 px-350" data-api_loader="ntv_channel" href="#">NTV Channel</a>
+            </li>
+            <li class="nav-item mx-0">
+                <a class="nav-link py-250 px-350" data-api_loader="oakes_clinic" href="#">Oakes Clinic</a>
+            </li>
+            <li class="nav-item mx-0">
+                <a class="nav-link py-250 px-350" data-api_loader="oak_atlantis" href="#">Oak Atlantis</a>
+            </li>
+            <li class="nav-item mx-0">
+                <a class="nav-link py-250 px-350" data-api_loader="neuron_currency" href="#">NeuroN Currency</a>
+            </li>
+            <li class="nav-item mx-0">
+                <a class="nav-link py-250 px-350" data-api_loader="about_us" href="#">O nas</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<main id="main"></main>
+
+<div id="transparency-layer" class="d-none animated"></div>
+
+<footer class="my-3">
+    <div class="container-fluid">
+        <div class="mr-1 row d-flex justify-content-between flex-column flex-lg-row align-items-center">
+            <ul class="nav justify-content-center my-3 my-lg-0">
+                <li class="nav-item">
+                    <a class="p-3 d-block text-dark">Sklep</a>
+                </li>
+                <li class="nav-item">
+                    <a class="p-3 d-block text-dark" data-api_loader="download" href="#">Pobierz</a>
+                </li>
+                <li class="nav-item">
+                    <a class="p-3 d-block text-dark" data-tpl_loader="events" href="#">Wydarzenia</a>
+                </li>
+                <li class="nav-item">
+                    <a class="p-3 d-block text-dark" data-tpl_loader="contact" href="#">Kontakt</a>
+                </li>
+                <li class="nav-item">
+                    <a class="p-3 d-block text-dark" href="#">O projekcie</a>
+                </li>
+            </ul>
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start footer-apps-wrapper">
+                <a style="border-radius: 0px;" class="btn btn-light border border-secondary d-flex m-2 m-sm-0 mr-sm-3 disabled" href="#">
+                    <img class="mr-2 " src="img/apple-dark.svg" alt="Apple Store">
+                    <div class="d-flex flex-column text-dark">
+                        <small class="m-0">Pobierz</small>
+                        <span class="m-0">Apple Store</span>
+                    </div>
+                </a>
+                <a style="border-radius: 0px;" class="btn btn-light border border-secondary d-flex m-2 m-sm-0 disabled" href="#">
+                    <img class="mr-2" src="img/google-dark.svg" alt="Google Play">
+                    <div class="d-flex flex-column text-dark">
+                        <small class="m-0">Pobierz</small>
+                        <span class="m-0">Google Play</span>
+                    </div>
+                </a>
+            </div>
+            <div class="w-100 my-3"></div>
+        </div>
+
+        <div class="d-flex flex-column flex-sm-row align-items-center justify-content-sm-between">
+            <div class="d-flex mb-3 mb-md-0" id="footerSocialLinks">
+                <a class="text-dark" target="_blank" href="https://www.facebook.com/neuronfoundation/">
+                    <i class="mr-3 icon-rss"></i>
+                </a>
+                <a class="text-dark" target="_blank" href="https://www.facebook.com/smartoakproject/">
+                    <i class="mr-3 icon-facebook"></i>
+                </a>
+                <a class="text-dark" target="_blank" href="https://twitter.com/dabrowskidebski">
+                    <i class="mr-3 icon-twitter"></i>
+                </a>
+                <a class="text-dark" target="_blank" href="https://www.instagram.com/smartoakproject/">
+                    <i class="mr-3 icon-instagram"></i>
+                </a>
+                <a class="text-dark" target="_blank" href="https://www.youtube.com/channel/UCFONzyeeunn3Wr5NC5SQFdA?view_as=subscriber">
+                    <i class="mr-3 icon-youtube-play"></i>
+                </a>
+                <a class="text-dark" target="_blank" href="https://www.linkedin.com/company/smartoakproject">
+                    <i class="mr-3 icon-linkedin-squared"></i>
+                </a>
+            </div>
+            <div class="text-right">
+                <p class="mb-0 small text-muted">
+                    © 2019 Smart Oak Project. Wszelkie prawa zastrzeżone.
+                </p>
+                <a class="mb-0 small text-muted text-sm-right privacy" data-tpl_loader="privacy_policy" href="#">Polityka prywatności</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="vendor/jquery-3.4.0/jquery-3.4.0.js"></script>
+<script src="vendor/popper.js-1.14.6/umd/popper.js"></script>
+<script src="vendor/bootstrap-4.3.1/dist/js/bootstrap.bundle.js"></script>
+<script src="vendor/mustache.js-3.0.1/mustache.js"></script>
+<script src="vendor/cookieconsent-3.1.0/build/cookieconsent.min.js"></script>
+
+<script src="js/rewrite/active.jquery.js"></script>
+<script src="js/rewrite/navigation.jquery.js"></script>
+<script src="js/rewrite/dataLoader.jquery.js"></script>
+<script src="js/rewrite/arrow.jquery.js"></script>
+<script src="js/rewrite/cookieConsent.js"></script>
+<script src="js/rewrite/safari.jquery.js"></script>
+<script src="./main.js"></script>
+<div id="scroll-button" class="d-none d-xl-block">
+    <div>
+        <em class="icon-up-open" id="scroll-top" style="visibility: hidden"></em>
+    </div>
+    <div>
+        <em class="icon-down-open" id="scroll-down"></em>
+    </div>
+</div>
+
+<!-- There will be loaded a JS <script> from dataLoader -->
+<div id="js"></div>
+</body>
+</html>

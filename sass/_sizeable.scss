@@ -1,0 +1,28 @@
+.w-0 {
+  @extend .mx-0;
+  @extend .px-0;
+  width: 0px !important;
+  max-width: 0px !important;
+
+  overflow: hidden; // I hate when flex do this to me
+}
+
+.w-90 {
+    @extend .mx-0;
+    @extend .px-0;
+
+    width: 90% !important;
+    max-width: 90% !important;
+
+    overflow: hidden;
+}
+
+.w-95 {
+    @extend .mx-0;
+    @extend .px-0;
+
+    width: 95% !important;
+    max-width: 95% !important;
+
+    overflow: hidden;
+}

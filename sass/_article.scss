@@ -1,0 +1,42 @@
+article {
+    img {
+        &.rotatable {
+            @extend %square;
+            @extend %square-sized;
+            @extend %square-shadow;
+            will-change: transform, rotate;
+        }
+
+        &.partners {
+            width: $article-image-partners-width;
+            height: $article-image-partners-height;
+        }
+    }
+
+    .button {
+        @extend %button;
+
+        &:hover {
+            transition: $buttons-article-transition;
+            background-color: $buttons-article-hover-background-color;
+            color: $buttons-article-hover-text-color;
+        }
+    }
+}
+
+article.download {
+    margin-top: 1cm;
+
+    .button {
+        @extend %button;
+        @include media-breakpoint-down(md) {
+            margin-top:     0.25 * $spacer;
+            margin-bottom:  0.25 * $spacer;
+
+            em {
+                float: left;
+            }
+            width: 100%;
+        }
+    }
+}

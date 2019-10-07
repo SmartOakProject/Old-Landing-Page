@@ -1,0 +1,29 @@
+@import "variables";
+@import "global";
+
+@import "../vendor/bootstrap-4.3.1/scss/bootstrap";
+
+@import "../vendor/fontawesome-free-5.6.3-web/css/all.min.css";
+@import "../vendor/fontello/css/fontello.css";
+@import "../vendor/cookieconsent-3.1.0/build/cookieconsent.min.css";
+
+@import "placeholders/buttons";
+@import "placeholders/squares";
+@import "placeholders/transform";
+
+@import "animate";
+@import "active";
+@import "cookie";
+@import "sizeable";
+@import "navigation";
+@import "languageDropdown";
+
+@import "header";
+@import "article";
+@import "news-section";
+@import "scroll-button";
+
+// Some contextual tabs
+@import "about_us";
+@import "calendar";
+@import "events";

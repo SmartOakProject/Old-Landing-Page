@@ -1,0 +1,21 @@
+%button {
+    * {
+        vertical-align: middle;
+    }
+
+    padding:    $buttons-default-padding;
+    text-decoration: none;
+
+    border: solid $buttons-default-border-size $buttons-default-border-color;
+    color: $buttons-default-text-color;
+
+    font-size: $buttons-default-font-size;
+    cursor: pointer;
+
+    display: inline-block;
+
+    em {
+        color: inherit;
+        font-size: $buttons-default-font-size * 1.2;
+    }
+}

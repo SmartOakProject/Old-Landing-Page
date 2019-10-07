@@ -1,0 +1,106 @@
+{
+    "header": {
+        "background": "img/calendar/stock0.png",
+        "buttons": [],
+        "logo": "https://kavalerchick.github.io/Landing-Page/img/logo-biale.png",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "gradient": "background: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.2), rgba(0,0,0,0))",
+        "text1": "Smart Oak",
+        "text2": "PROJECT",
+        "text3": "New Neuropsychiatry",
+        "text4": null,
+        "text5": null
+    },
+    "events": [
+        {
+            "time": {
+                "day":    1,
+                "month":  "Maja",
+                "year":   2019,
+                "start":  "08:00",
+                "end":    "22:45"
+            },
+            "title": {
+                "primary":    "Konferencja",
+                "secondary":  "Popularnonaukowa"
+            },
+            "image":        "img/calendar/stock1.png",
+            "description":  "<p>Some HTML description</p>"
+        },
+        {
+            "time": {
+                "day":    7,
+                "month":  "Maja",
+                "year":   2019,
+                "start":  "10:00",
+                "end":    "12:25"
+            },
+            "title": {
+                "primary":    "Grupy",
+                "secondary":  "Rehabilitacyjne"
+            },
+            "image":        "img/calendar/stock2.png",
+            "description":  "<blink>HUE HUE</blink>"
+        },
+        {
+            "time": {
+                "day":    11,
+                "month":  "Maja",
+                "year":   2019,
+                "start":  "11:00",
+                "end":    "15:15"
+            },
+            "title": {
+                "primary":    "Wydarzenie",
+                "secondary":  "lokalne (Warszawa)"
+            },
+            "image":        "img/calendar/stock3.png",
+            "description":  "Warszawa najlepsza"
+        },
+        {
+            "time": {
+                "day":    18,
+                "month":  "Maja",
+                "year":   2019,
+                "start":  "10:00",
+                "end":    "12:25"
+            },
+            "title": {
+                "primary":    "Hakaton",
+                "secondary":  "Wolontariacki"
+            },
+            "image":        "img/calendar/stock4.png",
+            "description":  "Haktaony maratony bazinga"
+        },
+        {
+            "time": {
+                "day":    22,
+                "month":  "Maja",
+                "year":   2019,
+                "start":  "10:00",
+                "end":    "12:25"
+            },
+            "title": {
+                "primary":    "Wydarzenie",
+                "secondary":  "Startupowe"
+            },
+            "image":        "img/calendar/stock5.png",
+            "description":  "<blink>HUE HUE</blink>"
+        },
+        {
+            "time": {
+                "day":    28,
+                "month":  "Maja",
+                "year":   2019,
+                "start":  "10:00",
+                "end":    "11:00"
+            },
+            "title": {
+                "primary":    "Konferencja",
+                "secondary":  "Popularnonaukowa"
+            },
+            "image":        "img/calendar/stock6.png",
+            "description":  "Konferencje"
+        }
+    ]
+}

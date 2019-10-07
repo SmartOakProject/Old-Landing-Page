@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+h4 {
+    font-weight: 300 !important;
+}
+
+.border-square {
+    border-radius: 0px;
+}
+
+body {
+    font-family: 'Muli', sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 300 !important;
+
+    /** Remove scrollbar from Firefox */
+    scrollbar-width: none;
+
+    /** Create black background under navigation bar without stacking another DOM layer */
+
+    background: linear-gradient(
+            to bottom,
+            rgb(0,0,0) 0%,
+            rgb(0,0,0) $nav-primary-height,
+
+            rgb(255,255,255) ($nav-primary-height + 1), // Start white color 1 pixel less than navigation
+            rgb(255,255,255) 100%
+    );
+
+    @media (min-width: 992px) {
+        background: linear-gradient(
+                to bottom,
+                rgb(0,0,0) 0%,
+                rgb(0,0,0) $nav-primary-height + $nav-secondary-height,
+
+                rgb(255,255,255) ($nav-primary-height + $nav-secondary-height + 1), // Start white color 1 pixel less than navigation
+                rgb(255,255,255) 100%
+        );
+    }
+}
+
+main {
+    min-height: 65vh;
+}
+
+/**
+  Well, why not to hide that 80's scroll bar on the right of the screen?
+  This may not work on Firefox, but Chrome likes it and we handled firefox in body tag
+*/
+::-webkit-scrollbar {
+  display: none;
+}
+
+/** Some elements don't deserve for events */
+.no-pointer-events {
+  pointer-events: none !important;
+}
+
+.unselectable {
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+
+.undraggable {
+    user-drag: none;
+    -webkit-user-drag: none;
+}
+
+@import "https://fonts.googleapis.com/css?family=Muli:300,400,600,800,900";
+@import "https://fonts.googleapis.com/css?family=Muli:300|Source+Sans+Pro:300";
+
+section {
+    @extend .my-2;
+    @extend .py-2;
+    @extend .overflow-hidden;
+}
+
+article {
+    @extend .py-5;
+    overflow: hidden !important;
+}

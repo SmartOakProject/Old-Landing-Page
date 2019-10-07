@@ -1,0 +1,11 @@
+#news-section {
+    img {
+        @extend %zoomable;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .shadowed {
+        box-shadow: 0 0.5rem 1rem rgba(214, 197, 246, 0.50);
+    }
+}

@@ -1,0 +1,19 @@
+#scroll-button {
+    @include media-breakpoint-down(md) {
+        display: none;
+    }
+    
+    z-index: $zindex-peak;
+
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    text-align: center;
+
+    em {
+        color: $border-color-active;
+        font-size: 12px;
+    }
+}

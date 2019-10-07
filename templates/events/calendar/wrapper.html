@@ -1,0 +1,24 @@
+<div class="d-none d-md-block container-fluid clnd-wrapper">
+    <div class="row">
+        {{#calendars}}
+        <div class="col-12 clnd-wrapper">
+            {{>calendar}}
+        </div>
+
+        <div class="row mt-4">
+            {{#labels}}
+                <div class="col-2 my-1">
+                    <div class="row">
+                        <div class="col-2 no-gutters px-0">
+                            <span class="clnd-lgnd-dot" style="background-color: {{color}}"></span>
+                        </div>
+                        <div class="col-10 no-gutters pl-1 pr-0">
+                            <p>{{name}}</p>
+                        </div>
+                    </div>
+                </div>
+            {{/labels}}
+        </div>
+        {{/calendars}}
+    </div>
+</div>

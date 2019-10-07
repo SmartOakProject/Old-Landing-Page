@@ -1,0 +1,12 @@
+%square {
+    border-radius: $squares-radius;
+}
+
+%square-sized {
+    width:  $squares-width;
+    height: $squares-height;
+}
+
+%square-shadow {
+    box-shadow: $squares-shadow;
+}

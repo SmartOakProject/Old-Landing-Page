@@ -1,0 +1,19 @@
+div#languageDropdownList {
+    min-width: 10px;
+    line-height: 2.5;
+
+    a {
+        @extend .mx-2;
+        @extend .px-1;
+        display: inline;
+        font-size: 13px;
+        font-weight: 300;
+        font-style: normal;
+
+        color: #dadada;
+
+        &:hover {
+            color: rgba(255, 255, 255, 0.75);
+        }
+    }
+}

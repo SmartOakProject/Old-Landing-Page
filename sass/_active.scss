@@ -1,0 +1,6 @@
+#secondaryNav {
+    a.active {
+        color: $navbar-light-color !important;
+        border-bottom-color: $border-color-active !important;
+    }
+}

@@ -1,0 +1,110 @@
+div#header {
+    * {
+        @extend .unselectable;
+        @extend .undraggable;
+    }
+
+    h1 {
+        color: $white;
+    }
+
+    background-size: cover;
+    background-position: center;
+    height: $header-height;
+    color: white;
+
+    .fadeOut {
+        cursor: default !important;
+    }
+
+    @media (max-width: 425px) {
+        background-position: 73% 0;
+        height: $header-height * 0.8;
+    }
+
+    div#header-content {
+        width: 100%;
+        position: fixed;
+        font-weight: 400;
+
+        /*
+        // Chrome p-fixed width 100% bug, works fine on Firefox
+        @media (max-width: 425px) {
+            width: 420px;
+        }
+        */
+
+        /**
+            0: 0,
+            1: ($spacer * .25),
+            2: ($spacer * .5),
+            3: $spacer,
+            4: ($spacer * 1.5),
+            5: ($spacer * 3)
+         */
+        padding-left:   $spacer * .25;
+        padding-right:  $spacer * .25;
+        padding-top:    $spacer * 0.1;
+
+        @media (min-width: 360px) {
+            // @extend .px-2 .pt-1;
+
+            padding-left:   $spacer * 1.0;
+            padding-right:  $spacer * 1.0;
+
+            padding-top:    $spacer * 0.5
+        }
+
+        @include media-breakpoint-up(md) {
+            padding-left: ($spacer * 6);
+            width: 70%;
+        }
+
+        img {
+            height: 150px;
+            width: auto;
+
+            @include media-breakpoint-down(lg) {
+                height: 120px;
+            }
+        }
+
+        p#header-text1 {
+            margin: 12px 0 12px 0;
+            font-size: 19px;
+            letter-spacing: 5.2px;
+            line-height: 5px;
+            padding-left: 6px;
+        }
+
+        p#header-text2 {
+            font-size: 10.5px;
+            margin-bottom: 15px;
+            letter-spacing: 14.8px;
+            margin-top: 0;
+            padding-left: 7px;
+        }
+
+        div#header-description {
+            h1 {
+                font-size: 3.5em;
+                @media (max-width: 425px) {
+                    font-size: 29px;
+                }
+            }
+
+            .button {
+                @extend %button;
+
+                border: solid 1px $buttons-header-border-color !important;
+                color: $buttons-header-text-color;
+
+                &:hover {
+                    transition: $buttons-header-transition;
+                    background-color: $buttons-header-hover-background-color;
+                    color: $buttons-header-hover-text-color;
+                }
+            }
+        }
+    }
+}

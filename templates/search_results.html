@@ -1,0 +1,14 @@
+<div class="searchResults d-none d-md-block animated faster text-light mt-1 p-lg-4">
+    <ul class="w-100 list-unstyled my-0">
+        {{#results}}
+            <li class="py-1">
+                <a href="#" class="text-dark text-decoration-none" data-{{loadWith}}="{{loader}}">{{displayText}}</a>
+            </li>
+        {{/results}}
+        {{^results}}
+            <li>
+                <span class="text-muted">Brak wyników</span>
+            </li>
+        {{/results}}
+    </ul>
+</div>

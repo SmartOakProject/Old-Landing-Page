@@ -1,0 +1,31 @@
+<table class="clnd-tbl" cellspacing="6px" data-currentMonth="{{month}}">
+    <thead>
+    <tr>
+        <th colspan="7" class="text-center">
+            <h2>{{monthName}} {{year}}</h2>
+        </th>
+    </tr>
+    <tr>
+        {{#weekDays}}
+        <th class="text-center clnd-th">{{.}}</th>
+        {{/weekDays}}
+    </tr>
+    </thead>
+    <tbody>
+    {{#weeks}}
+    <tr style="height: 50px;">
+        {{#.}}
+        <td class="clnd-td {{^day}}out{{/day}}">
+            <p class="clnd-day">{{day}}</p>
+            {{#events}}
+                {{#labels}}
+                    <div class="clnd-dot" style="background-color: {{color}}"></div>
+                {{/labels}}
+                <p class="clnd-ttl"> {{title}}</p>
+            {{/events}}
+        </td>
+        {{/.}}
+    </tr>
+    {{/weeks}}
+    </tbody>
+</table>

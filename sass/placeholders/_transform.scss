@@ -1,0 +1,16 @@
+%zoomable {
+    &:hover {
+
+        transition-duration: 1s;
+        filter: brightness(60%);
+
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -moz-transform:  scale(1.2);
+    }
+}
+div#header div#header-content div#header-description .button {
+    &:hover {
+        background-color: transparent !important;
+    }
+}

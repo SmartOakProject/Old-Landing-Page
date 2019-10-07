@@ -1,0 +1,50 @@
+{
+    "month": 6,
+    "year": 2019,
+    "labels": {
+        "1": {
+            "name": "Konferencje popularnonaukowe",
+            "color": "#2E2E2F"
+        },
+        "2": {
+            "name": "Konferencje naukowe",
+            "color": "#C5006F"
+        },
+        "3": {
+            "name": "Grupy rehabilitacyjne",
+            "color": "#0000DD"
+        },
+        "4": {
+            "name": "Wykłady",
+            "color": "aqua"
+        },
+        "5": {
+            "name": "Konferencje start-upowe",
+            "color": "#008B33"
+        },
+        "6": {
+            "name": "Festiwale",
+            "color": "#6700B3"
+        },
+        "7": {
+            "name": "Hakatony",
+            "color": "#FF9C10"
+        },
+        "8": {
+            "name": "Biegi",
+            "color": "red"
+        },
+        "9": {
+            "name": "Eduball",
+            "color": "blue"
+        },
+        "10": {
+            "name": "Spektakle teatralne",
+            "color": "pink"
+        }
+
+    },
+    "events": [
+
+    ]
+}

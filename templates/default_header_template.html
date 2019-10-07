@@ -1,0 +1,46 @@
+<style>
+    .transparent-background {
+        background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+        height: 100%;
+    }
+
+    @media (min-width: 992px) {
+        .transparent-background {
+            {{header.gradient}}
+        }
+    }
+</style>
+
+<!-- The header is just a big one div with background image -->
+<div id="header" class="mb-650" style="background-image: url({{header.background}})">
+    <!-- Since the header has its own image as background-image, the on-top gradient need to be separate DOM element -->
+    <!-- You can't put a gradient over background-image, also you cannot use media queries in style attribute -->
+    <div class="transparent-background">
+        <div id="header-content">
+            <img class="d-none d-lg-inline js-hideable" src="{{header.logo}}" alt="Neuron Foundation logo"/>
+            <p class="d-none d-lg-block js-hideable" id="header-text1">{{header.text1}}</p>
+            <p class="d-none d-lg-block js-hideable" id="header-text2">{{header.text2}}</p>
+            <div id="header-description">
+                <h1 class="mb-3 js-hideable">{{header.text3}}</h1>
+                <p class="js-hideable">{{header.content}}</p>
+
+                {{#header.buttons}}
+                    <a class="button mt-1 mt-sm-2 ml-0 mr-1 js-hideable" target="_blank" href="{{url}}">
+                        <em class="js-hideable {{icon}}"></em>
+                        <span>{{name}}</span>
+                    </a>
+                {{/header.buttons}}
+            </div>
+        </div>
+        <div id="left-corner" style="transform-origin: bottom right; float: left; display: inline-block; width:25%; height:100%;" class="tr">
+            <svg width='100%' height='100%' viewBox="0 0 100 100" preserveAspectRatio="none" style='background-color: transparent'>
+                <polygon id="left-polygon" fill="white" points="0 100,0 70,100 100" ></polygon>
+            </svg>
+        </div>
+        <div id="right-corner" style="transform-origin: bottom left; float: left; display: inline-block; width:75%;height:100%;" class="tr">
+            <svg width='100%' height='100%' viewBox="0 0 100 100" preserveAspectRatio="none" style='background-color: transparent'>
+                <polygon id="right-polygon" fill="white" points="100 100,100 50,0 100" ></polygon>
+            </svg>
+        </div>
+    </div>
+</div>

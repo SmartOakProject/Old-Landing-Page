@@ -1,0 +1,62 @@
+section#incoming {
+    div.square {
+        @extend %square;
+        @extend %square-shadow;
+        z-index: 1;
+
+        background: $incoming-events-background;
+    }
+
+    img.square {
+        @extend %square;
+        @extend %zoomable;
+
+        position: relative;
+        z-index: -1;
+    }
+
+    .event {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: $white;
+
+        @extend .unselectable;
+        @extend .undraggable;
+
+
+        [class^="title-"] {
+            position: absolute;
+            left: 10%;
+            width: 80%;
+
+            @include media-breakpoint-down(lg) {
+                left: 15%;
+                width: 70%;
+            }
+        }
+
+        .title-day {
+            font-size: 3rem;
+            top: 12%;
+        }
+
+        .title-month {
+            font-size: 2.5rem;
+            font-weight: 600;
+            top: 28%;
+        }
+
+        .title-separator {
+            border: 1.5px solid $white;
+            top: 65%;
+        }
+
+        .title-primary {
+            top: 65%;
+        }
+
+        .title-secondary {
+            top: 72%;
+        }
+    }
+}

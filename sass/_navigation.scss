@@ -1,0 +1,263 @@
+/** A no-scroll class that disables document scrolling, used when toggler menu opens */
+body.no-scroll {
+    overflow: hidden !important;
+    height: 100% !important;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+}
+
+/** Shared properties between both navigation bars */
+nav#primaryNav, nav#secondaryNav {
+
+
+    z-index: $zindex-peak;
+
+    .nav-link {
+        &:hover {
+            color: $white;
+        }
+
+        /** Mobile displays got extra bottom border while displaying nav items as non-inline list */
+        @include media-breakpoint-down(md) {
+            border-bottom: 1px solid #393939;
+        }
+    }
+}
+
+nav#primaryNav {
+    height: $nav-primary-height;        // This will change for secondaryNav when going lower than lg
+    min-height: $nav-primary-height;    // This will change for secondaryNav when going lower than lg
+
+    /** Which is actually out small logotype, but may be something else in future so whatever */
+    img {
+        max-height: $nav-primary-height * .8;
+        width: auto;
+    }
+
+    @include media-breakpoint-down(md) {
+        @supports (position: sticky) {
+            position: sticky;
+            top: 0;
+            z-index: $zindex-sticky;
+        }
+    }
+
+    .dropdown-menu {
+        width: 50px;
+
+        @include media-breakpoint-down(md) {
+            width: 100%;
+        }
+    }
+
+    .nav-item {
+        @include media-breakpoint-up(lg) {
+            border-bottom: none;
+        }
+
+        &.dropdown {
+            /**
+                Bootstrap was not meant to have more than one navbars, the default z-index for
+                dropdown is actually smaller than for the sticky elements. Possible bug
+             */
+            z-index: ($zindex-sticky+1);
+
+            .dropdown-item {
+                color: $gray-300;
+
+                &:hover {
+                    background-color: inherit;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    .navbar-toggler {
+        border-radius: 0.25rem; // Since we manipulated the $border-radius variable we need to patch this one here
+        color: rgba(255,255,255,0.85);
+        border-color: transparent !important;
+    }
+
+}
+
+nav#secondaryNav {
+    height: $nav-secondary-height;    // This will change for secondaryNav when going lower than lg
+
+    // The blue bottom border is set according to nav height, but if the nav items will wrap
+    // then the base height is not enough and screen become glitchy
+    // At simplest, its a hack to have (auto height + auto bottom border)
+    @media (min-width: 992px) and (max-width: 1122px) {
+        height: $nav-secondary-height * 1.4;
+    }
+
+    /*
+        Secondary nav does not show on resolutions lesser than lg if we don't use the right toggler.
+        Setting the height to 0 is better than messing around with display none as the toggler will
+        manipulate element height on expand and revert it back to its original height on collapse
+     */
+    @include media-breakpoint-down(md) {
+        height: 0px;
+    }
+
+    /*
+        Secondary nav stays sticky on resolutions bigger than lg
+     */
+    @include media-breakpoint-up(lg) {
+        // @extend .sticky-top; // Awaiting for them to include such a thing...
+        @supports (position: sticky) {
+            position: sticky;
+            top: 0px;
+            z-index: $zindex-sticky;
+        }
+
+        @supports not (position: sticky) {
+            position: relative;
+        }
+    }
+
+    .nav-link {
+        border: none;
+        line-height: 1;
+
+        padding: 9px 1.25rem 15px;
+
+        border-bottom: solid 2px $theme-colors-dark-light;
+
+        &:hover {
+            color: $navbar-light-color;
+            border-bottom-color: $border-color-active;
+        }
+    }
+}
+
+/**
+    A full-height collapse, see navigation.jquery.js for implementation details
+
+    The bootstrap collapse.js expands / collapses the div for the height of its content, but thats all.
+    If the div does not cover whole page, then we won't see this div over whole page.
+
+    Once we click on the toggler, we want to have it expanded over all screen height (100vh),
+    not just for the height of div content which may take like 5vh or something.
+
+    We want it because our div have a background color, and it looks like a 2-leg horse without being
+    splashed over whole screen
+*/
+.navbar-fh {
+    will-change: transform, height;
+    transition: height 0.5s;    // Speed of expanding / collapsing
+    height: 0px;                // Initial height is 0, as we can imagine, the menus are collapsed by default
+
+    /**
+        This one is fancy, the flex gives no **** about parent element height or width or anything, but we can
+        hide the overflowing flex elements so the result will be the same
+    */
+    @include media-breakpoint-down(md) {
+        overflow: hidden;
+    }
+
+    /**
+        Since its full height navbar collapse, it does not have a max height defined and its
+        base height is 100% of vertical height. This should be tested as some browsers ( Hi safari!!! )
+        don't calculate the vh as rest of the world
+    */
+    &.navbar-collapse-fh {
+        max-height: none;
+        height: 100vh;
+    }
+
+    @include media-breakpoint-down(md) {
+        // The right toggler expandable div is specific as its expandable element (0vh to 100vh)
+        // at fixed top of primary navigation height
+        &#rightToggler {
+            width: 100%;
+            position: fixed;
+            top: $nav-primary-height;
+        }
+    }
+}
+
+span.close {
+    padding: 5px;
+    margin-top: 4px;
+    font-size: 15px;
+    font-weight: 100;
+    background-color: transparent;
+    color: white !important;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+span.search {
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 100;
+    color: white !important;
+    display: inline-block;
+}
+
+/** Out famous search input field, didn't change a lot */
+input.search {
+    background-color: transparent;
+    border-radius: 0.8rem;
+    height: 25px;
+    margin-top: 7px;
+    color: #dadada;         // TODO Do something with that color
+    padding-left: 10px;
+    border: 0px;
+
+    &:focus {
+        outline: none;
+    }
+
+    @include media-breakpoint-down(lg) {
+        background-color: #282828;
+        color: #99997d;
+    }
+}
+
+div.searchResults {
+    background-color: $white;
+    position: absolute;
+    top: $nav-primary-height; // + $nav-secondary-height;
+    overflow-y: hidden;
+    width: 51.5%;
+    left: 25%;
+    z-index: $zindex-peak+3;
+    font-size: 0.9rem;
+
+    @include media-breakpoint-down(md) {
+        margin-top: 10px;
+        height: 0px;
+
+        width: 90%;
+        left: 5%;
+
+        -moz-transition: height 0.5s ease;
+        -webkit-transition: height 0.5s ease;
+        -o-transition: height 0.5s ease;
+        transition: height 0.5s ease;
+
+        &.open {
+            z-index: $zindex-peak+5;
+            height: 80vh;
+        }
+    }
+
+    li {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+#transparency-layer {
+    position: absolute;
+    top: $nav-primary-height;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    z-index: $zindex-peak+2;
+}
