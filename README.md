@@ -1,3 +1,1 @@
-# NeuroN-page
-
-## Link : https://kavalerchick.github.io/Landing-Page/
+# Old Landing Page
